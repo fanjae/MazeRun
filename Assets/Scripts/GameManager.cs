@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -166,5 +167,12 @@ public class GameManager : MonoBehaviour
         {
             resultText.text = message;
         }
+    }
+
+    // 현재 씬을 다시 불러와 게임 상태 초기화
+    public void RestartGame()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
     }
 }
