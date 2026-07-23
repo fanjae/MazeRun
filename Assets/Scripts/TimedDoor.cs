@@ -90,6 +90,8 @@ public class TimedDoor : MonoBehaviour
         return true;
     }
 
+    // 문 상태 격자 반영
+    // 닫힌 상태면 장애물, 열린 상태면 이동 가능하게 변경
     private void ApplyDoorState()
     {
         if (isClosed)
